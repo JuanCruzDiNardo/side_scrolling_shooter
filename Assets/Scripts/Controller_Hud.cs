@@ -27,6 +27,7 @@ public class Controller_Hud : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(Time.timeScale);
         if (gameOver)
         {
             Time.timeScale = 0;

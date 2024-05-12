@@ -39,6 +39,8 @@ public class Controller_Player : MonoBehaviour
     
     private void Awake()
     {
+        Time.timeScale = 1;
+
         if (_Player == null)
         {
             _Player = GameObject.FindObjectOfType<Controller_Player>();
@@ -258,6 +260,7 @@ public class Controller_Player : MonoBehaviour
                 gameObject.SetActive(false);
                 //Destroy(this.gameObject);
                 Controller_Hud.gameOver = true;
+
             }
         }
 

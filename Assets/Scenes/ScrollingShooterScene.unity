@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4304f20a9d23a2c439c7a027bb0d6244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  timer: 1
   enemies:
   - {fileID: 4060843512498849104, guid: 0d49c788bd1682846b0e92e2d4271795, type: 3}
   - {fileID: 4060843512498849104, guid: eda43a2aed03d644e8da7600313f7462, type: 3}
