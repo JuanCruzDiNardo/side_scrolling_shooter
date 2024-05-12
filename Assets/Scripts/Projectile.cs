@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float xLimit = 30;
-    public float yLimit = 20;
+    public float xLimit;
+    public float yLimit;
     
     virtual public void Update()
     {

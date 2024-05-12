@@ -58,10 +58,17 @@ public class Controller_Hud : MonoBehaviour
             else if (player.powerUpCount == 5)
             {
                 powerUpText.text = "PowerUp: Option";
+            }else if(player.powerUpCount == 6)
+            {
+                powerUpText.text = "PowerUp: Mini";
             }
-            else if (player.powerUpCount >= 6)
+            else if (player.powerUpCount == 7)
             {
                 powerUpText.text = "PowerUp: Shield";
+            }
+            else if(player.powerUpCount >= 8)
+            {
+                powerUpText.text = "PowerUp: Nuke";
             }
         }
         pointsText.text = "Score: " + points.ToString();

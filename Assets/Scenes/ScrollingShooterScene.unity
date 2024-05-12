@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -139,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 4030288557592288549, guid: 72e5233e75519f741b764da130079030,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.24
+      value: -9.08
       objectReference: {fileID: 0}
     - target: {fileID: 4030288557592288549, guid: 72e5233e75519f741b764da130079030,
         type: 3}
@@ -1061,11 +1061,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4304f20a9d23a2c439c7a027bb0d6244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 7
+  timer: 5
   enemies:
-  - {fileID: 4060843512498849104, guid: b7b34090b424bfd40bd47ad5cdf05e98, type: 3}
-  - {fileID: 4060843512498849104, guid: 2079109aa6d35b54eb2a9bcfdd363a24, type: 3}
+  - {fileID: 4060843512498849104, guid: 0d49c788bd1682846b0e92e2d4271795, type: 3}
   - {fileID: 4060843512498849104, guid: eda43a2aed03d644e8da7600313f7462, type: 3}
+  - {fileID: 4060843512498849104, guid: 2079109aa6d35b54eb2a9bcfdd363a24, type: 3}
+  - {fileID: 4060843512498849104, guid: b7b34090b424bfd40bd47ad5cdf05e98, type: 3}
   instantiatePos: {fileID: 1265482111}
 --- !u!4 &1265482113
 Transform:

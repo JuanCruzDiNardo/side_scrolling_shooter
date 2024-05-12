@@ -41,6 +41,7 @@ public class Controller_Instantiator : MonoBehaviour
     {
         if (timer <= 0)
         {
+            Controller_Enemy.nuked = false;
             float offsetX = instantiatePos.transform.position.x;
             int rnd = UnityEngine.Random.Range(0, enemies.Count);
             for (int i = 0; i < 5; i++)

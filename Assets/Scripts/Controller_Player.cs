@@ -22,6 +22,7 @@ public class Controller_Player : MonoBehaviour
     internal float shootingCount=0;
     internal bool forceField;
     internal bool laserOn;
+    internal bool miniOn;
 
     public static bool lastKeyUp;
 
@@ -67,6 +68,7 @@ public class Controller_Player : MonoBehaviour
         missiles = false;
         laserOn = false;
         forceField = false;
+        miniOn = false;
         options = new List<Controller_Option>();
     }
 
@@ -176,10 +178,22 @@ public class Controller_Player : MonoBehaviour
             else if (powerUpCount == 5)
             {
                 OptionListing();
-            }
-            else if (powerUpCount >= 6)
+            }else if (powerUpCount == 6)
+            {
+                if (!miniOn)
+                {
+                    rb.transform.localScale = new Vector3(rb.transform.localScale.x / 2, rb.transform.localScale.y / 2, rb.transform.localScale.z / 2);
+                    powerUpCount = 0;
+                    miniOn = true;
+                }
+
+            }else if (powerUpCount == 7)
             {
                 forceField = true;
+                powerUpCount = 0;
+            }else if(powerUpCount >= 8)
+            {
+                Controller_Enemy.nuked = true;
                 powerUpCount = 0;
             }
         }

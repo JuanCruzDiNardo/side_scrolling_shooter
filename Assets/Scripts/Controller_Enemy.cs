@@ -9,7 +9,9 @@ public class Controller_Enemy : MonoBehaviour
 
     public float xLimit;
 
-    private float shootingCooldown;
+    public float shootingCooldown;
+
+    public static bool nuked = false;
 
     public GameObject enemyProjectile;
 
@@ -17,7 +19,7 @@ public class Controller_Enemy : MonoBehaviour
 
     void Start()
     {
-        shootingCooldown = UnityEngine.Random.Range(1, 10);
+        shootingCooldown = UnityEngine.Random.Range(1, 10);        
     }
 
     public virtual void Update()
@@ -25,9 +27,10 @@ public class Controller_Enemy : MonoBehaviour
         shootingCooldown -= Time.deltaTime;
         CheckLimits();
         ShootPlayer();
+        Nuked();
     }
 
-    void ShootPlayer()
+    public virtual void ShootPlayer()
     {
         if (Controller_Player._Player != null)
         {
@@ -72,5 +75,14 @@ public class Controller_Enemy : MonoBehaviour
         {
             Instantiate(powerUp, transform.position, Quaternion.identity);
         }
+    }
+
+    public void Nuked()
+    {
+        if (nuked)
+        {            
+            Destroy(this.gameObject);            
+        }
+            
     }
 }
